@@ -61,13 +61,13 @@ nav {
   display: block;
   font-size: 2rem;
   padding: 1.5rem 2rem;
-  color: #333;
+  color: #756E74;
   font-weight: 600;
   transition: color 0.3s;
 }
 
 .nav-list a:hover {
-  color: #888B92;
+  color: #B0B3BA;
 }
 
 ul {
