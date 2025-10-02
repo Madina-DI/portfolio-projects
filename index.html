@@ -10,6 +10,63 @@
 
     <title>My portfolio</title>
   </head>
+ <script>
+document.addEventListener('DOMContentLoaded', function () {
+  (function () {
+    const grid = document.querySelector('.projects-grid');
+    const cards = Array.from(grid.querySelectorAll('.project'));
+    const btn = document.getElementById('show-all');
+
+    if (!grid || !cards.length || !btn) return;
+
+    function getCols() {
+      const cs = getComputedStyle(grid);
+      const cols = cs.gridTemplateColumns.split(' ').filter(Boolean).length;
+      return Math.max(cols, 1);
+    }
+
+    function showAll() {
+      cards.forEach(c => c.classList.remove('is-hidden'));
+      btn.setAttribute('aria-expanded', 'true');
+      btn.innerHTML = 'Show less <i class="fas fa-chevron-up" aria-hidden="true"></i>';
+    }
+
+    function collapseToLastRowHidden() {
+      const cols = getCols();
+      if (cards.length <= cols) {
+        cards.forEach(c => c.classList.remove('is-hidden'));
+        btn.style.display = 'none';
+        return;
+      }
+      const lastRowCount = (cards.length % cols) || cols;
+      const showCount = cards.length - lastRowCount;
+      cards.forEach((card, idx) => {
+        card.classList.toggle('is-hidden', idx >= showCount);
+      });
+      btn.style.display = (showCount < cards.length) ? 'inline-flex' : 'none';
+      btn.setAttribute('aria-expanded', 'false');
+      btn.innerHTML = 'Show all <i class="fas fa-chevron-right" aria-hidden="true"></i>';
+    }
+
+    // старт
+    collapseToLastRowHidden();
+
+    // клики
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      expanded ? collapseToLastRowHidden() : showAll();
+    });
+
+    // ресайз
+    window.addEventListener('resize', () => {
+      if (btn.getAttribute('aria-expanded') === 'false') {
+        collapseToLastRowHidden();
+      }
+    });
+  })();
+});
+</script>
   <body>
     <nav id="navbar">
         <ul class="nav-list">
@@ -56,8 +113,8 @@
                     <span class="project-badge">WordPress</span>
                 </a>
                 <div class="content">
-                    <h3>JeepTour — туристическая компания</h3>
-                    <p>WordPress: настройка темы, адаптивность, секции туров, формы, базовое SEO.</p>
+                    <h3 class="project-title">JeepTour — туристическая компания</h3>
+                    <p class="project-desc">WordPress: настройка темы, адаптивность, секции туров, формы, базовое SEO.</p>
                 </div>
                 <div class="project-actions">
                     <a class="link" href="https://jeeptour-ing.ru/" target="_blank" rel="noopener">Live ↗</a>
@@ -89,6 +146,19 @@
                     <a class="link" href="https://madina-di.github.io/Slider-js" target="_blank" rel="noopener">GitHub ↗</a>
                 </div>
             </article>
+            <article class="project">
+                <a href="https://visachance.ru/" target="_blank" class="projects project-title">
+                    <img class="project-image" src="image/visachance.jpg" alt="VisaChance — помощь с заявками на Green Card"/>
+                    <span class="project-badge">WordPress</span>
+                </a>
+                <div class="content">
+                    <h3 class="project-title">VisaChance — помощь с заявками на Green Card</h3>
+                    <p class="project-desc">WordPress landing: структура, дизайн, формы, политика конфиденциальности, SEO.</p>
+                </div>
+                <div class="project-actions">
+                    <a class="link" href="https://visachance.ru/" target="_blank" rel="noopener">Live ↗</a>
+                </div>
+            </article>
             <article  class="project">
                 <a href="https://madina-di.github.io/youtalk/" id="profile-link" target="_blank" class="projects project-title"> 
                     <img class="project-image" src="image/previewBlogYouTalk.jpg" alt="Youtalk"/>
@@ -100,19 +170,6 @@
                 <div class="project-actions">
                     <a class="link" href="https://madina-di.github.io/youtalk" target="_blank" rel="noopener">Live ↗</a>
                     <a class="link" href="https://madina-di.github.io/youtalk" target="_blank" rel="noopener">GitHub ↗</a>
-                </div>
-            </article>
-            <article class="project">
-                <a href="https://visachance.ru/" target="_blank" class="projects project-title">
-                    <img class="project-image" src="image/visachance.jpg" alt="VisaChance — помощь с заявками на Green Card"/>
-                    <span class="project-badge">WordPress</span>
-                </a>
-                <div class="content">
-                    <h3>VisaChance — помощь с заявками на Green Card</h3>
-                    <p>WordPress landing: структура, дизайн, формы, политика конфиденциальности, SEO.</p>
-                </div>
-                <div class="project-actions">
-                    <a class="link" href="https://visachance.ru/" target="_blank" rel="noopener">Live ↗</a>
                 </div>
             </article>
             <article class="project">
@@ -155,9 +212,9 @@
                 </div>
             </article>
             </div>
-            <a href="" class="btn btn-show-all" target="_blank">
-                Show all<i class="fas fa-chevron-right"></i>
-            </a>
+          <a href="#" class="btn btn-show-all" id="show-all" aria-expanded="false">
+              Show all <i class="fas fa-chevron-right" aria-hidden="true"></i>
+          </a>
         </section>
         <section id="contact" class="contact-section">
             <div class="contact-section-header">
