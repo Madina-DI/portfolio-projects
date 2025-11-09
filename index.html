@@ -10,63 +10,63 @@
 
     <title>My portfolio</title>
   </head>
- <script>
-document.addEventListener('DOMContentLoaded', function () {
-  (function () {
-    const grid = document.querySelector('.projects-grid');
-    const cards = Array.from(grid.querySelectorAll('.project'));
-    const btn = document.getElementById('show-all');
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        // для каждой группы проектов — свой обработчик
+        document.querySelectorAll('.projects-group').forEach(group => {
+            const grid = group.querySelector('.projects-grid');
+            const cards = Array.from(grid.querySelectorAll('.project'));
+            const btn = group.querySelector('.btn-show-all');
+            if (!grid || !cards.length || !btn) return;
 
-    if (!grid || !cards.length || !btn) return;
+            function getCols() {
+            const cs = getComputedStyle(grid);
+            const cols = cs.gridTemplateColumns.split(' ').filter(Boolean).length;
+            return Math.max(cols, 1);
+            }
 
-    function getCols() {
-      const cs = getComputedStyle(grid);
-      const cols = cs.gridTemplateColumns.split(' ').filter(Boolean).length;
-      return Math.max(cols, 1);
-    }
+            function showAll() {
+            cards.forEach(c => c.classList.remove('is-hidden'));
+            btn.setAttribute('aria-expanded', 'true');
+            btn.innerHTML = 'Show less <i class="fas fa-chevron-up" aria-hidden="true"></i>';
+            }
 
-    function showAll() {
-      cards.forEach(c => c.classList.remove('is-hidden'));
-      btn.setAttribute('aria-expanded', 'true');
-      btn.innerHTML = 'Show less <i class="fas fa-chevron-up" aria-hidden="true"></i>';
-    }
+            function collapseToLastRowHidden() {
+            const cols = getCols();
+            if (cards.length <= cols) {
+                cards.forEach(c => c.classList.remove('is-hidden'));
+                btn.style.display = 'none';
+                return;
+            }
+            const lastRowCount = (cards.length % cols) || cols;
+            const showCount = cards.length - lastRowCount;
+            cards.forEach((card, idx) => {
+                card.classList.toggle('is-hidden', idx >= showCount);
+            });
+            btn.style.display = (showCount < cards.length) ? 'inline-flex' : 'none';
+            btn.setAttribute('aria-expanded', 'false');
+            btn.innerHTML = 'Show all <i class="fas fa-chevron-right" aria-hidden="true"></i>';
+            }
 
-    function collapseToLastRowHidden() {
-      const cols = getCols();
-      if (cards.length <= cols) {
-        cards.forEach(c => c.classList.remove('is-hidden'));
-        btn.style.display = 'none';
-        return;
-      }
-      const lastRowCount = (cards.length % cols) || cols;
-      const showCount = cards.length - lastRowCount;
-      cards.forEach((card, idx) => {
-        card.classList.toggle('is-hidden', idx >= showCount);
-      });
-      btn.style.display = (showCount < cards.length) ? 'inline-flex' : 'none';
-      btn.setAttribute('aria-expanded', 'false');
-      btn.innerHTML = 'Show all <i class="fas fa-chevron-right" aria-hidden="true"></i>';
-    }
+            // старт для этой группы
+            collapseToLastRowHidden();
 
-    // старт
-    collapseToLastRowHidden();
+            // клики по кнопке этой группы
+            btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+            expanded ? collapseToLastRowHidden() : showAll();
+            });
 
-    // клики
-    btn.addEventListener('click', function (e) {
-      e.preventDefault();
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
-      expanded ? collapseToLastRowHidden() : showAll();
-    });
-
-    // ресайз
-    window.addEventListener('resize', () => {
-      if (btn.getAttribute('aria-expanded') === 'false') {
-        collapseToLastRowHidden();
-      }
-    });
-  })();
-});
-</script>
+            // пересчёт при ресайзе — только если свернуто
+            window.addEventListener('resize', () => {
+            if (btn.getAttribute('aria-expanded') === 'false') {
+                collapseToLastRowHidden();
+            }
+            });
+        });
+        });
+        </script>
   <body>
     <nav id="navbar">
         <ul class="nav-list">
@@ -106,115 +106,149 @@ document.addEventListener('DOMContentLoaded', function () {
       </section>
       <section id="projects" class="projects-section">
         <h2 class="projects-section-header">Projects</h2>
-        <div class="projects-grid">
-            <article class="project">
-                <a href="https://jeeptour-ing.ru/" target="_blank" class="projects project-title">
-                    <img class="project-image" src="image/jeeptour-ing.jpg" alt="JeepTour — туристическая компания"/>
-                    <span class="project-badge">WordPress</span>
-                </a>
-                <div class="content">
-                    <h3 class="project-title">JeepTour — туристическая компания</h3>
-                    <p class="project-desc">WordPress: настройка темы, адаптивность, секции туров, формы, базовое SEO.</p>
-                </div>
-                <div class="project-actions">
-                    <a class="link" href="https://jeeptour-ing.ru/" target="_blank" rel="noopener">Live ↗</a>
-                </div>
-            </article>
-            <article  class="project">
-                <a href="https://madina-di.github.io/Bookshop/" id="profile-link" target="_blank" class="projects project-title">
-                    <img class="project-image" src="image/previewBookshop.jpg" alt="bookshop"/>
-                </a>
-                <div class="content">
-                    <h3 class="project-title">Bookshop (JS + SCSS)</h3>
-                    <p class="project-desc">Каталог книг с поиском по API. Адаптив.</p>                    
-                </div>
-                <div class="project-actions">
-                    <a class="link" href="https://madina-di.github.io/Bookshop" target="_blank" rel="noopener">Live ↗</a>
-                    <a class="link" href="https://madina-di.github.io/Bookshop" target="_blank" rel="noopener">GitHub ↗</a>
-                </div>
-            </article>
-            <article  class="project">
-                <a href="https://madina-di.github.io/Slider-js/" id="profile-link" target="_blank" class="projects project-title"> 
-                    <img class="project-image" src="image/previewSlider.jpg" alt="Slider"/>
-                </a>
-                <div class="content">
-                    <h3 class="project-title">Slider</h3>
-                    <p class="project-desc">Интерактивный слайдер изображений с навигацией и адаптивной поддержкой мобильных</p>                    
-                </div>
-                <div class="project-actions">
-                    <a class="link" href="https://madina-di.github.io/Slider-js" target="_blank" rel="noopener">Live ↗</a>
-                    <a class="link" href="https://madina-di.github.io/Slider-js" target="_blank" rel="noopener">GitHub ↗</a>
-                </div>
-            </article>
-            <article class="project">
-                <a href="https://visachance.ru/" target="_blank" class="projects project-title">
-                    <img class="project-image" src="image/visachance.jpg" alt="VisaChance — помощь с заявками на Green Card"/>
-                    <span class="project-badge">WordPress</span>
-                </a>
-                <div class="content">
-                    <h3 class="project-title">VisaChance — помощь с заявками на Green Card</h3>
-                    <p class="project-desc">WordPress landing: структура, дизайн, формы, политика конфиденциальности, SEO.</p>
-                </div>
-                <div class="project-actions">
-                    <a class="link" href="https://visachance.ru/" target="_blank" rel="noopener">Live ↗</a>
-                </div>
-            </article>
-            <article  class="project">
-                <a href="https://madina-di.github.io/youtalk/" id="profile-link" target="_blank" class="projects project-title"> 
-                    <img class="project-image" src="image/previewBlogYouTalk.jpg" alt="Youtalk"/>
-                </a>
-                <div class="content">
-                    <h3 class="project-title">Youtalk</h3>
-                    <p class="project-desc">Макет блога с сеткой статей, карточками новостей и базовой адаптивной версткой</p>                    
-                </div>
-                <div class="project-actions">
-                    <a class="link" href="https://madina-di.github.io/youtalk" target="_blank" rel="noopener">Live ↗</a>
-                    <a class="link" href="https://madina-di.github.io/youtalk" target="_blank" rel="noopener">GitHub ↗</a>
-                </div>
-            </article>
-            <article class="project">
-                <a href="https://madina-di.github.io/tribute-page/" id="profile-link" target="_blank" class="projects project-title">
-                    <img class="project-image" src="image/preview.jpg" alt="tribute-page"/>
-                </a>
-                <div class="content">
-                    <h3 class="project-title">Tribute-page</h3>
-                    <p class="project-desc">Одностраничный сайт‑трибьют с адаптивной версткой и чистой типографикой</p>
-                </div>
-                <div class="project-actions">
-                    <a class="link" href="https://madina-di.github.io/tribute-page" target="_blank" rel="noopener">Live ↗</a>
-                    <a class="link" href="https://madina-di.github.io/tribute-page" target="_blank" rel="noopener">GitHub ↗</a>
-                </div>
-            </article>
-            <article  class="project">
-                <a href="https://madina-di.github.io/technical-documentation-page/" id="profile-link" target="_blank" class="projects project-title">
-                    <img class="project-image" src="image/preview2.jpg" alt="technical-documentation"/>
-                </a>
-                <div class="content">
-                    <h3 class="project-title">Technical-documentation-page</h3>
-                    <p class="project-desc">Техническая документация с оглавлением, плавной навигацией и разметкой по стандартам</p>
-                </div>
-                <div class="project-actions">
-                    <a class="link" href="https://madina-di.github.io/technical-documentation-page" target="_blank" rel="noopener">Live ↗</a>
-                    <a class="link" href="https://madina-di.github.io/technical-documentation-page" target="_blank" rel="noopener">GitHub ↗</a>
-                </div>
-            </article>
-            <article  class="project">
-                <a href="https://madina-di.github.io/product-landing-page/" id="profile-link" target="_blank" class="projects project-title">
-                    <img class="project-image" src="image/preview3.jpg" alt="product-landing"/>
-                </a>
-                <div class="content">
-                    <h3 class="project-title">Product-landing-page</h3>
-                    <p class="project-desc">Лендинг товара с видеообзором, списком преимуществ и отзывами пользователей</p>
-                </div>
-                <div class="project-actions">
-                    <a class="link" href="https://madina-di.github.io/product-landing-page" target="_blank" rel="noopener">Live ↗</a>
-                    <a class="link" href="https://madina-di.github.io/product-landing-page" target="_blank" rel="noopener">GitHub ↗</a>
-                </div>
-            </article>
+        <div class="projects-group">
+            <h3 class="project-category">🌐 WordPress Projects</h3>         
+            <div class="projects-grid">
+                <article class="project">
+                    <a href="https://jeeptour-ing.ru/" target="_blank" class="projects project-title">
+                        <img class="project-image" src="image/jeeptour-ing.jpg" alt="JeepTour — туристическая компания"/>
+                        <span class="project-badge">WordPress</span>
+                    </a>
+                    <div class="content">
+                        <h3 class="project-title">JeepTour — туристическая компания</h3>
+                        <p class="project-desc">WordPress: настройка темы, адаптивность, секции туров, формы, базовое SEO.</p>
+                        <p class="stack">WordPress: Astra, Elementor, RankMath SEO</p>
+                    </div>
+                    <div class="project-actions">
+                        <a class="link" href="https://jeeptour-ing.ru/" target="_blank" rel="noopener">Live ↗</a>
+                    </div>
+                </article>
+                <article class="project">
+                    <a href="https://visachance.ru/" target="_blank" class="projects project-title">
+                        <img class="project-image" src="image/visachance.jpg" alt="VisaChance — помощь с заявками на Green Card"/>
+                        <span class="project-badge">WordPress</span>
+                    </a>
+                    <div class="content">
+                        <h3 class="project-title">VisaChance — помощь с заявками на Green Card</h3>
+                        <p class="project-desc">WordPress landing: структура, дизайн, формы, политика конфиденциальности, SEO.</p>
+                        <p class="stack">WordPress: Astra, Elementor, RankMath SEO</p>
+                    </div>
+                    <div class="project-actions">
+                        <a class="link" href="https://visachance.ru/" target="_blank" rel="noopener">Live ↗</a>
+                    </div>
+                </article>
             </div>
-          <a href="#" class="btn btn-show-all" id="show-all" aria-expanded="false">
-              Show all <i class="fas fa-chevron-right" aria-hidden="true"></i>
-          </a>
+            <a href="#" class="btn btn-show-all" aria-expanded="false"> Show all <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+        </div>
+        <div class="projects-group">
+            <h3 class="project-category">Telegram Bots</h3>
+            <div class="projects-grid">
+                <article class="project">
+                    <a href="https://github.com/Madina-DI/translator-bot" target="_blank" class="projects project-title">
+                    </a>
+                    <div class="content">
+                        <h3 class="project-title">Translator Bot</h3>
+                        <p class="project-desc">
+                            Телеграм-бот для перевода текста между выбранными языками (EN/RU/FR/DE).
+                            Команды: <code>/start</code>, <code>/help</code>. Запросы к LibreTranslate.</p>
+                            <p class="stack">Tech: Node.js, Telegraf, Axios, Express</p>
+                    </div>
+                    <div class="project-actions">
+                        <a class="link" href="https://github.com/Madina-DI/translator-bot" target="_blank" rel="noopener">GitHub ↗</a>
+                         <a class="link" href="https://web.telegram.org/k/#@di_translatorai_bot" target="_blank">Open Bot ↗</a>
+                    </div>
+                </article>
+            </div>
+            <a href="#" class="btn btn-show-all" aria-expanded="false">Show all <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+        </div>
+        <div class="projects-group">
+            <h3 class="project-category">Custom development</h3> 
+            <div class="projects-grid">
+                <article  class="project">
+                    <a href="https://madina-di.github.io/Slider-js/" id="profile-link" target="_blank" class="projects project-title"> 
+                        <img class="project-image" src="image/previewSlider.jpg" alt="Slider"/>
+                    </a>
+                    <div class="content">
+                        <h3 class="project-title">Slider</h3>
+                        <p class="project-desc">Интерактивный слайдер изображений с навигацией и адаптивной поддержкой мобильных</p>
+                        <p class="stack">Tech: HTML, SCSS, JavaScript</p>                    
+                    </div>
+                    <div class="project-actions">
+                        <a class="link" href="https://madina-di.github.io/Slider-js" target="_blank" rel="noopener">Live ↗</a>
+                        <a class="link" href="https://madina-di.github.io/Slider-js" target="_blank" rel="noopener">GitHub ↗</a>
+                    </div>
+                </article>
+                <article  class="project">
+                    <a href="https://madina-di.github.io/Bookshop/" id="profile-link" target="_blank" class="projects project-title">
+                        <img class="project-image" src="image/previewBookshop.jpg" alt="bookshop"/>
+                    </a>
+                    <div class="content">
+                        <h3 class="project-title">Bookshop</h3>
+                        <p class="project-desc">Каталог книг с поиском по API. Адаптив.</p>                    
+                        <p class="stack">Tech: Pug, SCSS (BEM), JavaScript (modules), Webpack</p>                    
+                    </div>
+                    <div class="project-actions">
+                        <a class="link" href="https://madina-di.github.io/Bookshop" target="_blank" rel="noopener">Live ↗</a>
+                        <a class="link" href="https://madina-di.github.io/Bookshop" target="_blank" rel="noopener">GitHub ↗</a>
+                    </div>
+                </article>
+                <article  class="project">
+                    <a href="https://madina-di.github.io/youtalk/" id="profile-link" target="_blank" class="projects project-title"> 
+                        <img class="project-image" src="image/previewBlogYouTalk.jpg" alt="Youtalk"/>
+                    </a>
+                    <div class="content">
+                        <h3 class="project-title">Youtalk</h3>
+                        <p class="project-desc">Макет блога с сеткой статей, карточками новостей и базовой адаптивной версткой</p>                    
+                    </div>
+                    <div class="project-actions">
+                        <a class="link" href="https://madina-di.github.io/youtalk" target="_blank" rel="noopener">Live ↗</a>
+                        <a class="link" href="https://madina-di.github.io/youtalk" target="_blank" rel="noopener">GitHub ↗</a>
+                    </div>
+                </article>
+                <article class="project is-hidden">
+                    <a href="https://madina-di.github.io/tribute-page/" id="profile-link" target="_blank" class="projects project-title">
+                        <img class="project-image" src="image/preview.jpg" alt="tribute-page"/>
+                    </a>
+                    <div class="content">
+                        <h3 class="project-title">Tribute-page</h3>
+                        <p class="project-desc">Одностраничный сайт‑трибьют с адаптивной версткой и чистой типографикой</p>
+                    </div>
+                    <div class="project-actions">
+                        <a class="link" href="https://madina-di.github.io/tribute-page" target="_blank" rel="noopener">Live ↗</a>
+                        <a class="link" href="https://madina-di.github.io/tribute-page" target="_blank" rel="noopener">GitHub ↗</a>
+                    </div>
+                </article>
+                <article  class="project is-hidden">
+                    <a href="https://madina-di.github.io/technical-documentation-page/" id="profile-link" target="_blank" class="projects project-title">
+                        <img class="project-image" src="image/preview2.jpg" alt="technical-documentation"/>
+                    </a>
+                    <div class="content">
+                        <h3 class="project-title">Technical-documentation-page</h3>
+                        <p class="project-desc">Техническая документация с оглавлением, плавной навигацией и разметкой по стандартам</p>
+                    </div>
+                    <div class="project-actions">
+                        <a class="link" href="https://madina-di.github.io/technical-documentation-page" target="_blank" rel="noopener">Live ↗</a>
+                        <a class="link" href="https://madina-di.github.io/technical-documentation-page" target="_blank" rel="noopener">GitHub ↗</a>
+                    </div>
+                </article>
+                <article class="project is-hidden">
+                    <a href="https://madina-di.github.io/product-landing-page/" id="profile-link" target="_blank" class="projects project-title">
+                        <img class="project-image" src="image/preview3.jpg" alt="product-landing"/>
+                    </a>
+                    <div class="content">
+                        <h3 class="project-title">Product-landing-page</h3>
+                        <p class="project-desc">Лендинг товара с видеообзором, списком преимуществ и отзывами пользователей</p>
+                    </div>
+                    <div class="project-actions">
+                        <a class="link" href="https://madina-di.github.io/product-landing-page" target="_blank" rel="noopener">Live ↗</a>
+                        <a class="link" href="https://madina-di.github.io/product-landing-page" target="_blank" rel="noopener">GitHub ↗</a>
+                    </div>
+                </article>
+            </div>
+            <a href="#" class="btn btn-show-all" aria-expanded="false"> Show all <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+        </div>
+        </a>
+        </div>
         </section>
         <section id="contact" class="contact-section">
             <div class="contact-section-header">
