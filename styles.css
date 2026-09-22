@@ -123,3 +123,20 @@ img{max-width:100%;display:block}
 .case-nav .language-toggle{margin-left:auto;margin-right:0;background:rgba(255,255,255,.35);border-color:rgba(21,21,21,.12)}
 @media(max-width:900px){.site-header{gap:12px}.nav{margin-left:auto}.language-toggle{margin-left:0}}
 @media(max-width:620px){.language-toggle{padding:5px 8px}.site-header .brand{flex:0 0 auto}.site-header .nav{margin-left:auto}.site-header .nav a:nth-child(2),.site-header .nav a:nth-child(3){display:none}.case-nav{gap:10px}.case-nav .language-toggle{margin-left:auto}}
+
+.visual-social{background:linear-gradient(145deg,#151a20,#29384a);display:grid;place-items:center;padding:34px}
+.social-flow{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;color:#f5eee4;font-size:12px;font-weight:700;letter-spacing:.12em}
+.social-flow span{padding:12px 16px;border:1px solid rgba(255,255,255,.24);border-radius:999px;background:rgba(255,255,255,.05)}
+.social-flow b{color:#b99555;font-size:22px}
+.social-grid{position:absolute;left:28px;right:28px;bottom:28px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.social-grid i{height:54px;border-radius:12px;background:linear-gradient(145deg,rgba(255,255,255,.16),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.08)}
+.current-builds{margin-top:64px;padding-top:44px;border-top:1px solid var(--line)}
+.current-builds-heading{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:24px}
+.current-builds-heading h3{font-family:"Playfair Display",serif;font-size:38px;line-height:1;margin:0}
+.current-builds-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.current-builds-grid article{padding:28px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.3)}
+.current-builds-grid article>span{display:block;font-size:10px;letter-spacing:.15em;color:var(--gold);margin-bottom:18px}
+.current-builds-grid h4{font-family:"Playfair Display",serif;font-size:32px;margin:0 0 12px}
+.current-builds-grid p{color:var(--muted);font-size:15px;margin:0 0 20px}
+.current-builds-grid small{display:inline-flex;padding:7px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+@media(max-width:700px){.current-builds-heading{display:block}.current-builds-grid{grid-template-columns:1fr}}
