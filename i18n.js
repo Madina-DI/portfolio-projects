@@ -238,7 +238,15 @@
     "AI CREATIVE PORTFOLIO":"AI CREATIVE PORTFOLIO",
     "Continue to Sofiere Studio.":"Перейти в Sofiere Studio.",
     "Open Sofiere Studio ↗":"Открыть Sofiere Studio ↗",
-    "Back to development work":"Назад к разработке"
+    "Back to development work":"Назад к разработке",
+    "CURRENT PRODUCTS · IN DEVELOPMENT":"ТЕКУЩИЕ ПРОДУКТЫ · В РАЗРАБОТКЕ",
+    "What I am building now.":"Что я сейчас разрабатываю.",
+    "PRODUCT / INTERIOR DESIGN":"ПРОДУКТ / ДИЗАЙН ИНТЕРЬЕРОВ",
+    "Application for interior designers. Active product in development; public functionality and demo are being prepared.":"Приложение для дизайнеров интерьеров. Активно разрабатывается; публичная функциональность и демо готовятся.",
+    "In development":"В разработке",
+    "LOCAL PROTOTYPE":"ЛОКАЛЬНЫЙ ПРОТОТИП",
+    "Local application prototype currently in development. It is listed here as an active build without claiming unverified public functionality.":"Локальный прототип приложения, который сейчас находится в разработке. Указан как активный проект без заявления о неподтвержденной публичной функциональности.",
+    "Local · in development":"Локально · в разработке"
   };
 
   const titleRu = {
