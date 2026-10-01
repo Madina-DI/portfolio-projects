@@ -150,3 +150,8 @@ img{max-width:100%;display:block}
 .obmer-mini-plan i{position:absolute;width:6px;height:6px;border-radius:50%;background:#b99555}
 .obmer-mini-plan i:nth-child(1){left:-4px;top:-4px}.obmer-mini-plan i:nth-child(2){right:-4px;top:-4px}.obmer-mini-plan i:nth-child(3){right:-4px;bottom:-4px}.obmer-mini-plan i:nth-child(4){left:-4px;bottom:-4px}
 @media(max-width:620px){.visual-obmer{gap:22px}.obmer-mini-phone{width:95px;height:185px}.obmer-mini-plan{width:125px;height:95px}}
+
+/* Card Studio case */
+.visual-card-studio{background:#f8f7fc;min-height:380px}.visual-card-studio img{object-fit:contain}.card-studio-screen{display:block;width:100%;height:auto}.screen-caption,.editor-figure figcaption{font-size:14px;color:#6f6a65;max-width:1000px;margin:16px auto;line-height:1.6}.editor-figure{margin:30px 0}.developer-materials{background:#f3efe7}.hero-actions{flex-wrap:wrap}
+.hero-copy,.creative-copy,.creative-card{min-width:0}.hero-visual{overflow:hidden}
+@media(max-width:620px){.hero h1{font-size:52px}.creative-copy h2{font-size:38px;overflow-wrap:anywhere}.creative-card h3{font-size:34px;overflow-wrap:anywhere}.button{max-width:100%;white-space:normal;text-align:center}}

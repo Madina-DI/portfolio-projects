@@ -12,6 +12,8 @@ Personal portfolio for **Creative Technologist & AI Product Builder / Vibe Coder
 
 ## Featured projects
 
+- **Card Studio** — Wildberries card-preparation prototype: Excel/CSV import, AI drafts, validation and human review. [Case](https://madina-portfolio-sage.vercel.app/case-card-studio.html) · [Source](projects/wb-card-studio) · [PDF demo](docs/Card_Studio_WB_Demo.pdf)
+
 - **Sofidar Studio** — AI video production platform in development: brief/trend → AI storyboard → scenes → render jobs; credits, queue, storage, avatars and trend library
 - **Dost 3D** — Three.js / WebGL / GLSL interactive AI-company website
 - **Stroyka CRM** — Next.js / React internal construction-management product case
