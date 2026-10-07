@@ -1,5 +1,6 @@
 (() => {
   const RU = {
+    "Updated with Card Studio version 2: the live service, its workflow and real card reviews.":"Обновлены с учётом Card Studio версии 2: работающий сервис, процесс и разборы настоящих карточек.",
     "Live site · card-studio-production.up.railway.app ↗":"Сайт сервиса · card-studio-production.up.railway.app ↗",
     "MARKETPLACE AUTOMATION · LIVE SERVICE":"АВТОМАТИЗАЦИЯ МАРКЕТПЛЕЙСОВ · РАБОТАЮЩИЙ СЕРВИС",
     "A working service for preparing and improving Wildberries cards: import from Excel or straight from the seller account, characteristics from WB reference lists, fact-based AI texts, client approval by link and upload through the official WB API.":"Работающий сервис для подготовки и доработки карточек Wildberries: импорт из Excel или прямо из кабинета продавца, характеристики по справочникам WB, AI-тексты только по фактам, согласование с клиентом по ссылке и загрузка через официальный API WB.",
