@@ -1,5 +1,7 @@
 (() => {
   const RU = {
+    "WhatsApp — let’s discuss ↗":"WhatsApp — обсудим ↗",
+    "Discuss on WhatsApp ↗":"Обсудим в WhatsApp ↗",
     "Updated with Card Studio version 2: the live service, its workflow and real card reviews.":"Обновлены с учётом Card Studio версии 2: работающий сервис, процесс и разборы настоящих карточек.",
     "Live site · card-studio-production.up.railway.app ↗":"Сайт сервиса · card-studio-production.up.railway.app ↗",
     "MARKETPLACE AUTOMATION · LIVE SERVICE":"АВТОМАТИЗАЦИЯ МАРКЕТПЛЕЙСОВ · РАБОТАЮЩИЙ СЕРВИС",
