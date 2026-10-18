@@ -1,5 +1,76 @@
 (() => {
   const RU = {
+    "I build web applications, CRM systems and automation tools. JavaScript, React, thoughtful interfaces and useful integrations.":"Разрабатываю веб-приложения, CRM и автоматизации. JavaScript, React, продуманные интерфейсы и полезные интеграции.",
+    "web and mobile products":"веб-продукты и приложения",
+    "integrations and automation":"интеграции и автоматизация",
+    "Frontend education, UX/UI training and practical experience building interfaces, applications and business tools.":"Образование во frontend и UX/UI, практика разработки интерфейсов, приложений и бизнес-инструментов.",
+    "Telegram API · queues · CRM workflows":"Telegram API · очереди · процессы CRM",
+    "Figma · Git/GitHub · tests · Playwright":"Figma · Git/GitHub · тесты · Playwright",
+
+    "HTML/CSS → JavaScript → React · how my frontend practice began":"HTML/CSS → JavaScript → React · начало моего пути во frontend",
+    "BACKGROUND & EDUCATION":"БАЗА, ОБРАЗОВАНИЕ И ОПЫТ",
+    "How I came to development.":"Мой путь в разработке.",
+    "My foundation combines formal study, hands-on frontend projects and professional experience in finance and construction operations.":"Моя база складывается из образования, практики frontend-разработки и профессионального опыта в финансах и строительных бизнес-процессах.",
+    "Economics and business operations":"Экономика и бизнес-процессы",
+    "Degree in Finance & Credit. More than 15 years in finance, accounting and construction operations help me understand how companies work.":"Образование по специальности «Финансы и кредит». Более 15 лет опыта в финансах, бухгалтерии и строительных процессах помогают понимать работу компаний.",
+    "Frontend foundations":"База во frontend",
+    "Started building websites with HTML/CSS and JavaScript, then worked with React, APIs, responsive layouts and Git.":"Начала создавать сайты на HTML/CSS и JavaScript. Затем — React, API, адаптивная вёрстка и Git.",
+    "Frontend and UX/UI education":"Обучение frontend и UX/UI",
+    "Skillfactory Frontend Developer, freeCodeCamp Responsive Web Design and CalArts/Coursera interface-design training.":"Skillfactory Frontend Developer, freeCodeCamp Responsive Web Design и обучение дизайну интерфейсов CalArts/Coursera.",
+    "Applications and automation":"Приложения и автоматизация",
+    "Building Sofidar, Stroyka CRM, Card Studio and Obmer: product flows, interfaces, data, integrations and verification.":"Разрабатываю Sofidar, Stroyka CRM, Card Studio и Obmer: продуктовые сценарии, интерфейсы, данные, интеграции и проверки.",
+    "BUSINESS BACKGROUND":"ПРОФЕССИОНАЛЬНЫЙ ОПЫТ",
+
+    "Projects":"Проекты",
+    "About me ↗":"Обо мне ↗",
+    "CV · RU":"Резюме · RU",
+    "CV · EN":"Резюме · EN",
+    "Contact":"Контакты",
+    "DEVELOPMENT · PRODUCTS · AUTOMATION":"РАЗРАБОТКА · ПРИЛОЖЕНИЯ · АВТОМАТИЗАЦИЯ",
+    "Frontend Developer & AI Product Builder":"Frontend-разработчик · Приложения и автоматизация",
+    "I build web applications, CRM systems and automation tools. My foundation is JavaScript, React, HTML/CSS and API integration; my business background helps me design useful product logic.":"Разрабатываю веб-приложения, CRM и автоматизации. Моя база — JavaScript, React, HTML/CSS и работа с API. Опыт в финансах и бизнес-процессах помогает продумывать логику продуктов.",
+    "Explore projects":"Смотреть проекты",
+    "Developer CV · RU":"Резюме разработчика · RU",
+    "frontend foundation":"база во frontend",
+    "started building for the web":"начало работы с веб-разработкой",
+    "years in finance & business operations":"лет в финансах и бизнес-процессах",
+    "SELECTED DEVELOPMENT PROJECTS":"ОСНОВНЫЕ ПРОЕКТЫ",
+    "Applications, systems and automation.":"Приложения, системы и автоматизация.",
+    "My main products first, including projects in active development. Smaller and earlier work is collected below.":"Сначала — основные продукты, в том числе те, которые сейчас разрабатываю. Более небольшие и ранние работы собраны ниже.",
+    "An AI image and video platform: briefs, storyboards, scene generation, credits, job queues and media storage. I develop the product workflow, interface and integrations.":"Платформа генерации изображений и видео: брифы, раскадровки, генерация сцен, кредиты, очередь задач и хранение медиа. Разрабатываю продуктовый процесс, интерфейс и интеграции.",
+    "AI PRODUCT PLATFORM · IN DEVELOPMENT":"AI-ПЛАТФОРМА · В РАЗРАБОТКЕ",
+    "In development · product, UX/UI, application logic and integrations":"В разработке · продукт, UX/UI, логика приложения и интеграции",
+    "BRIEF":"БРИФ",
+    "STORYBOARD":"РАСКАДРОВКА",
+    "SCENES / GENERATION":"СЦЕНЫ / ГЕНЕРАЦИЯ",
+    "PRODUCT WORKFLOW":"ПРОЦЕСС РАБОТЫ",
+    "Quran learning PWA with translation, audio, quizzes and locally saved progress. A product in development.":"PWA для изучения Корана: перевод, аудио, задания и сохранение прогресса. Продукт в разработке.",
+    "Commercial WordPress website for jeep tours in Ingushetia.":"Коммерческий сайт на WordPress для джип-туров по Ингушетии.",
+    "MORE DEVELOPMENT WORK":"ДРУГИЕ ПРОЕКТЫ РАЗРАБОТКИ",
+    "Other applications and websites":"Другие приложения и сайты",
+    "PWA · In development":"PWA · В разработке",
+    "React workflow app":"React-приложение задач",
+    "Frontend catalog with API":"Frontend-каталог с API",
+    "Learning archive":"Архив учебных проектов",
+    "Earlier frontend projects":"Ранние frontend-проекты",
+    "Development skills and experience.":"База и опыт в разработке.",
+    "Frontend development":"Frontend-разработка",
+    "JavaScript, TypeScript, React, Next.js, HTML/CSS/SCSS, responsive interfaces and API integration.":"JavaScript, TypeScript, React, Next.js, HTML/CSS/SCSS, адаптивные интерфейсы и интеграция API.",
+    "Applications & data":"Приложения и данные",
+    "Application logic, Node.js, Prisma/PostgreSQL, validation, authentication and roles.":"Логика приложений, Node.js, Prisma/PostgreSQL, валидация, авторизация и роли.",
+    "Automation & integrations":"Автоматизация и интеграции",
+    "CRM workflows, Telegram bots, queues, scheduled jobs and external APIs.":"Бизнес-процессы CRM, Telegram-боты, очереди, расписания и внешние API.",
+    "UX/UI & quality":"UX/UI и качество",
+    "User flows, Figma, component design, Git/GitHub, unit/integration checks and Playwright.":"Пользовательские сценарии, Figma, компоненты, Git/GitHub, unit/integration проверки и Playwright.",
+    "My web development journey started in 2023. More than 15 years in finance and business operations inform the data models and workflows I build. I use AI tools in development, debugging and verification.":"Веб-разработкой занимаюсь с 2023 года. Более 15 лет опыта в финансах и бизнес-процессах помогают проектировать модели данных и рабочие сценарии. AI-инструменты использую в разработке, отладке и проверке решений.",
+    "AI films and visual work":"AI-видео и визуальное творчество",
+    "Sofiere Studio · Creator portfolio ↗":"Sofiere Studio · Портфолио Creator ↗",
+    "Developer resumes in Russian and English, selected project cases and the Card Studio demo.":"Резюме разработчика на русском и английском, кейсы проектов и демо Card Studio.",
+    "Frontend and interface design.":"Frontend и дизайн интерфейсов.",
+    "Let’s discuss your application or automation.":"Обсудим ваше приложение или автоматизацию.",
+
+    "Back to projects →":"К проектам →",
+    "Open Sofidar ↗":"Открыть Sofidar ↗",
     "WhatsApp — let’s discuss ↗":"WhatsApp — обсудим ↗",
     "Discuss on WhatsApp ↗":"Обсудим в WhatsApp ↗",
     "Updated with Card Studio version 2: the live service, its workflow and real card reviews.":"Обновлены с учётом Card Studio версии 2: работающий сервис, процесс и разборы настоящих карточек.",
@@ -144,7 +215,7 @@
     "Next · AI Creative →":"Далее · AI Creative →",
     "Development case · Dost 3D →":"Кейс разработки · Dost 3D →",
 
-    "01 · INTERACTIVE WEB / CREATIVE TECHNOLOGY · 2026":"01 · ИНТЕРАКТИВНЫЙ WEB / CREATIVE TECHNOLOGY · 2026",
+    "INTERACTIVE WEB / CREATIVE TECHNOLOGY · 2026":"ИНТЕРАКТИВНЫЙ WEB / CREATIVE TECHNOLOGY · 2026",
     "Live 3D Website":"Живой 3D-сайт",
     "A browser-native 3D experience for an AI company — interactive objects, real-time materials, multilingual storytelling and voice.":"Нативный для браузера 3D-опыт для AI-компании: интерактивные объекты, материалы в реальном времени, мультиязычный сторителлинг и голос.",
     "ROLE":"РОЛЬ",
@@ -190,7 +261,7 @@
     "Open live site ↗":"Открыть сайт ↗",
     "View GitHub ↗":"GitHub ↗",
 
-    "02 · PRODUCT / INTERNAL TOOL · 2026":"02 · ПРОДУКТ / ВНУТРЕННИЙ ИНСТРУМЕНТ · 2026",
+    "PRODUCT / INTERNAL TOOL · 2026":"ПРОДУКТ / ВНУТРЕННИЙ ИНСТРУМЕНТ · 2026",
     "A construction-management product prototype designed around real operational flows, roles and project visibility.":"Прототип продукта для управления строительными процессами, построенный вокруг реальных рабочих сценариев, ролей и прозрачности проектов.",
     "Product thinking · UX/UI · Frontend":"Product thinking · UX/UI · Frontend",
     "DOMAIN":"ДОМЕН",
@@ -228,7 +299,7 @@
     "Request walkthrough ↗":"Запросить walkthrough ↗",
     "Back to portfolio":"Назад в портфолио",
 
-    "03 · AUTOMATION / TELEGRAM PRODUCT":"03 · АВТОМАТИЗАЦИЯ / TELEGRAM-ПРОДУКТ",
+    "AUTOMATION / TELEGRAM PRODUCT":"АВТОМАТИЗАЦИЯ / TELEGRAM-ПРОДУКТ",
     "A scheduled content product with subscriber management, response logic, source tracking and a deployable backend.":"Контентный продукт по расписанию с управлением подписчиками, логикой ответов, отслеживанием источников и готовым к деплою backend.",
     "Product logic · Development · Content system":"Логика продукта · Разработка · Контентная система",
     "DEPLOY":"ДЕПЛОЙ",
@@ -326,7 +397,7 @@
     ,"IOS / LIDAR PRODUCT":"IOS / LIDAR-ПРОДУКТ"
     ,"Room-measurement app for interior designers: RoomPlan + raw LiDAR mesh, manual depth measurement, scan-quality checks and geometry export.":"Приложение для обмера помещений для дизайнеров интерьеров: RoomPlan + сырой LiDAR-меш, ручные depth-замеры, проверки качества скана и экспорт геометрии."
     ,"LOCAL PROTOTYPE":"ЛОКАЛЬНЫЙ ПРОТОТИП"
-    ,"04 · IOS / LIDAR PRODUCT · IN DEVELOPMENT":"04 · IOS / LIDAR-ПРОДУКТ · В РАЗРАБОТКЕ"
+    ,"IOS / LIDAR PRODUCT · IN DEVELOPMENT":"IOS / LIDAR-ПРОДУКТ · В РАЗРАБОТКЕ"
     ,"LiDAR Scanner":"LiDAR-сканер"
     ,"An iPhone/iPad measurement app for interior designers that combines RoomPlan, raw LiDAR mesh and manual depth measurement.":"Приложение для iPhone/iPad для обмеров интерьера, объединяющее RoomPlan, сырой LiDAR-меш и ручной depth-замер."
     ,"Product · UX · iOS Development":"Product · UX · iOS-разработка"
@@ -392,7 +463,7 @@
     ,"This case connects real construction/accounting domain knowledge with product modeling and full-stack implementation: precise money handling, safe migrations, reusable validation and testable business logic.":"Этот кейс соединяет реальное знание строительных и бухгалтерских процессов с моделированием продукта и full-stack реализацией: точная работа с деньгами, безопасные миграции, переиспользуемая валидация и тестируемая бизнес-логика."
     ,"Private product in development; walkthrough available for relevant opportunities.":"Приватный продукт в разработке; walkthrough доступен для релевантных вакансий и проектов."
 
-    ,"03 · AI AUTOMATION / SOCIAL PUBLISHING · 2026":"03 · AI-АВТОМАТИЗАЦИЯ / ПУБЛИКАЦИЯ В СОЦСЕТЯХ · 2026"
+    ,"AI AUTOMATION / SOCIAL PUBLISHING · 2026":"AI-АВТОМАТИЗАЦИЯ / ПУБЛИКАЦИЯ В СОЦСЕТЯХ · 2026"
     ,"A GPT-connected publishing system that turns chat commands into queued, checked and scheduled social-media actions.":"Система публикаций, связанная с GPT, которая превращает команды из чата в поставленные в очередь, проверенные и запланированные действия в соцсетях."
     ,"Product logic · Automation · Integration":"Логика продукта · Автоматизация · Интеграции"
     ,"INTEGRATION":"ИНТЕГРАЦИИ"
@@ -433,7 +504,7 @@
 
   const titleRu = {
     "case-card-studio.html":"Card Studio — автоматизация карточек WB · Мадина Дахкилгова",
-    "index.html":"Madina Dakhkilgova — Креативный технолог и AI-креативный продюсер",
+    "index.html":"Мадина Дахкилгова — Портфолио разработчика",
     "case-dost.html":"Dost 3D — Кейс · Madina Dakhkilgova",
     "case-crm.html":"Stroyka CRM — Кейс · Madina Dakhkilgova",
     "case-oberezhno.html":"Oberezhno Bot — Кейс · Madina Dakhkilgova",
