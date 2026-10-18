@@ -35,4 +35,4 @@ Creative AI-video work is connected through **Sofiere Studio**.
 
 ## Page structure
 
-Main projects are ordered by product scope: Sofidar, Stroyka CRM, Card Studio, Obmer, AI Social Publishing Manager, Dost 3D, Oberezhno. Smaller applications follow; earlier learning projects stay in a collapsed archive. The header links to the personal profile and developer CVs in RU/EN. Creator work has its own Sofiere Studio portfolio.
+Main projects are ordered by product scope: Sofidar, Stroyka CRM, Card Studio, Obmer, AI Social Publishing Manager, Dost 3D, Oberezhno. Smaller applications follow; earlier learning projects stay in a collapsed archive. The header links to the personal profile, developer CVs in RU/EN and the development portfolio PDF. Creator work has its own Sofiere Studio portfolio.
