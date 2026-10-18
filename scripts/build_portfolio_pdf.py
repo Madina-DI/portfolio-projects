@@ -5,13 +5,22 @@ from reportlab.lib.colors import HexColor
 from reportlab.lib.utils import ImageReader
 from pathlib import Path
 from PIL import Image
-R=Path(__file__).resolve().parents[1];OUT=R/'docs/Madina_Development_Portfolio_RU.pdf'
+import argparse
+import json
+parser=argparse.ArgumentParser(description='Build the Russian or English portfolio PDF')
+parser.add_argument('--lang', choices=['ru','en'], default='ru')
+LANG=parser.parse_args().lang
+TRANSLATIONS=json.loads(Path(__file__).with_name('portfolio_translations.json').read_text())
+def tr(s):
+ return TRANSLATIONS.get(s,s) if LANG=='en' else s
+R=Path(__file__).resolve().parents[1];OUT=R/f'docs/Madina_Development_Portfolio_{LANG.upper()}.pdf'
 for name,file in [('sans','DejaVuSans.ttf'),('bold','DejaVuSans-Bold.ttf'),('serif','DejaVuSerif.ttf')]:pdfmetrics.registerFont(TTFont(name,'/usr/share/fonts/truetype/dejavu/'+file))
-W,H=960,540; bg='#F6F3ED';ink='#202820';muted='#62675E';gold='#9C7948';green='#17251F';pale='#D3D9CC'; c=canvas.Canvas(str(OUT),pagesize=(W,H));c.setTitle('Мадина Дахкилгова — Портфолио разработчика');c.setAuthor('Madina Dakhkilgova');c.setSubject('Frontend, AI products and automation. Updated 18 October 2026.')
+W,H=960,540; bg='#F6F3ED';ink='#202820';muted='#62675E';gold='#9C7948';green='#17251F';pale='#D3D9CC'; c=canvas.Canvas(str(OUT),pagesize=(W,H));c.setTitle(tr('Мадина Дахкильгова — Портфолио разработчика'));c.setAuthor('Madina Dakhkilgova');c.setSubject('Frontend, AI products and automation. Updated 18 October 2026.')
 def text(s,x,y,size=17,font='sans',color=ink):
+ s=tr(s)
  c.setFillColor(HexColor(color));c.setFont(font,size);c.drawString(x,H-y-size*.82,s)
 def lines(s,x,y,width,size=17,leading=26,font='sans',color=ink):
- for para in s.split('\n'):
+ for para in tr(s).split('\n'):
   words=para.split();line=''
   for word in words:
    t=(line+' '+word).strip()
@@ -24,16 +33,17 @@ def rule(y,x=48,w=864,color='#D6D9CF'):
  c.setStrokeColor(HexColor(color));c.setLineWidth(.7);c.line(x,H-y,x+w,H-y)
 def page(n,label,dark=False):
  col=green if dark else bg;c.setFillColor(HexColor(col));c.rect(0,0,W,H,fill=1,stroke=0)
- text(label.upper(),48,32,10,'sans',pale if dark else gold)
+ text(tr(label).upper(),48,32,10,'sans',pale if dark else gold)
  rule(500,color='#415047' if dark else '#D6D9CF');text('MADINA DAKHKILGOVA  /  DEVELOPMENT',48,514,8,'sans',pale if dark else muted);text(f'{n:02d} / 11',865,514,8,'sans',pale if dark else muted)
 def link(label,url,x,y,color=green,size=12):
+ label=tr(label)
  text(label,x,y,size,'sans',color);tw=pdfmetrics.stringWidth(label,'sans',size);c.setStrokeColor(HexColor(color));c.setLineWidth(.5);c.line(x,H-y-size-3,x+tw,H-y-size-3);c.linkURL(url,(x,H-y-size-6,x+tw,H-y+3),relative=0,thickness=0)
 def img(path,x,y,w,h):
  im=Image.open(path);iw,ih=im.size;scale=min(w/iw,h/ih);a,b=iw*scale,ih*scale;c.drawImage(str(path),x+(w-a)/2,H-y-b,a,b,mask='auto')
 def done():c.showPage()
 site='https://madina-portfolio-sage.vercel.app/';creator='https://madina-di.github.io/sofiere-studio/'
 page(1,'Портфолио разработчика / октябрь 2026',True)
-text('Мадина',48,102,58,'serif',bg);text('Дахкилгова',48,169,58,'serif',bg)
+text('Мадина',48,102,58,'serif',bg);text('Дахкильгова',48,169,58,'serif',bg)
 text('Frontend Developer',51,278,24,'sans',bg);text('& AI Product Builder',51,313,24,'sans',bg)
 lines('Веб-приложения, бизнес-системы\nи автоматизация',52,382,670,18,28,color=pale)
 link('madina-portfolio-sage.vercel.app',site,52,456,pale,12)

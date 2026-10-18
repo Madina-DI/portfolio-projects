@@ -503,7 +503,8 @@
 
   Object.assign(RU, {
   "Resume ↗": "Резюме ↗",
-  "Presentation · RU ↗": "Презентация ↗",
+  "Presentation · RU ↗": "Презентация · RU ↗",
+  "Presentation · EN ↗": "Презентация · EN ↗",
   "AI Creator ↗": "AI-креатор ↗",
   "I turn business workflows into clear, useful applications. Frontend development, product thinking and a visual eye shaped by UX/UI and AI filmmaking.": "Превращаю бизнес-процессы в понятные приложения. Frontend-разработка, продуктовый подход и внимание к визуальной подаче из практики UX/UI и AI-кино.",
   "Independent developer / Remote": "Независимый разработчик / Удалённо",
@@ -520,7 +521,7 @@
   "I also create AI films and visual stories for brands. That practice informs how I design interfaces and present products.": "Я также создаю AI-фильмы и визуальные истории для брендов. Эта практика помогает мне проектировать интерфейсы и выразительно представлять продукты.",
   "Explore AI Creator portfolio ↗": "Смотреть портфолио AI-креатора ↗",
   "Resume & presentation": "Резюме и презентация",
-  "Developer resumes in two languages and a presentation of selected projects. Updated October 2026.": "Резюме разработчика на двух языках и презентация избранных проектов. Обновлено в октябре 2026.",
+  "Resume and project presentation in Russian and English. Choose the version to share. Updated October 2026.": "Резюме и презентация проектов на русском и английском. Выберите версию, которой хотите поделиться. Обновлено в октябре 2026.",
   "Skip to projects": "Перейти к проектам",
   "Published platform · active development": "Платформа опубликована · активно развивается",
   "Published platform in active development.": "Платформа опубликована и развивается.",
