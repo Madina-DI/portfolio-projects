@@ -9,20 +9,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+<meta name="theme-color" content="#17251f">
+<link rel="canonical" href="https://madina-portfolio-sage.vercel.app/">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="Back to top">MD</a>
-    <nav class="nav" aria-label="Primary navigation">
-      <a href="#work">Projects</a>
-      <a href="https://madina-di.github.io/Promo_site/Site_card.html" target="_blank" rel="noopener noreferrer">About me ↗</a>
-      <a href="docs/Madina_Developer_CV_RU.pdf" target="_blank" rel="noopener noreferrer">CV · RU</a>
-      <a href="docs/Madina_Developer_CV_EN.pdf" target="_blank" rel="noopener noreferrer">CV · EN</a>
-      <a class="nav-featured" href="docs/Madina_Development_Portfolio_RU.pdf" target="_blank" rel="noopener noreferrer">Portfolio · PDF</a>
-      <a href="https://madina-di.github.io/sofiere-studio/" target="_blank" rel="noopener noreferrer">Creator ↗</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <a href="#work" class="skip-link">Skip to projects</a><header class="site-header">
+    <a class="brand" href="#top" aria-label="Madina Dakhkilgova, back to top">MD</a><nav class="nav" aria-label="Primary navigation"><a href="#work">Projects</a><a href="https://madina-di.github.io/Promo_site/Site_card.html" target="_blank" rel="noopener noreferrer">About me ↗</a><a class="cv-link nav-document" href="docs/Madina_Developer_CV_EN.pdf" target="_blank" rel="noopener noreferrer">Resume ↗</a><a class="nav-document" href="docs/Madina_Development_Portfolio_RU.pdf?v=20261018" target="_blank" rel="noopener noreferrer">Presentation · RU ↗</a><a class="nav-creator" href="https://madina-di.github.io/sofiere-studio/" target="_blank" rel="noopener noreferrer">AI Creator ↗</a><a href="#contact">Contact</a></nav></header>
 
   <main id="top">
     <section class="hero">
@@ -31,27 +23,18 @@
         <h1>Madina<br><span>Dakhkilgova</span>
 </h1>
         <p class="hero-role">Frontend Developer &amp; AI Product Builder</p>
-        <p class="hero-text">I build web applications, CRM systems and automation tools. JavaScript, React, thoughtful interfaces and useful integrations.</p>
+        <p class="hero-text">I turn business workflows into clear, useful applications. Frontend development, product thinking and a visual eye shaped by UX/UI and AI filmmaking.</p>
         <div class="hero-actions">
-          <a href="#work" class="button button-primary">Explore projects</a>
-          <a href="docs/Madina_Development_Portfolio_RU.pdf" target="_blank" rel="noopener noreferrer" class="button button-ghost button-gold">Portfolio · PDF</a>
-          <a href="docs/Madina_Developer_CV_EN.pdf" target="_blank" rel="noopener noreferrer" class="button button-ghost">Developer CV · EN</a>
-          <a href="https://github.com/Madina-DI" target="_blank" rel="noopener noreferrer" class="button button-ghost">GitHub ↗</a>
-        </div>
-      <div class="hero-project-links">
-<a href="#project-sofidar">Sofidar →</a><a href="#project-crm">Stroyka CRM →</a><a href="#project-card-studio">Card Studio →</a>
+<a href="#work" class="button button-primary">Explore projects <span aria-hidden="true">↘</span></a><a href="docs/Madina_Developer_CV_EN.pdf" target="_blank" rel="noopener noreferrer" class="button button-ghost cv-link">Resume ↗</a><a href="docs/Madina_Development_Portfolio_RU.pdf?v=20261018" target="_blank" rel="noopener noreferrer" class="button button-ghost">Presentation · RU ↗</a>
+</div>
+<div class="hero-project-links">
+<a href="https://github.com/Madina-DI" target="_blank" rel="noopener noreferrer">GitHub ↗</a><span>Independent developer / Remote</span>
 </div>
 </div>
-      <div class="hero-visual" aria-hidden="true">
-        <div class="orbit orbit-one"></div>
-        <div class="orbit orbit-two"></div>
-        <div class="core">CODE</div>
-        <div class="node n1">WEB</div>
-        <div class="node n2">APPS</div>
-        <div class="node n3">API</div>
-        <div class="node n4">DATA</div>
-      </div>
-    </section>
+      <aside class="work-index" aria-label="Selected projects"><div class="work-index-top">
+<span>SELECTED WORK</span><span>2026</span>
+</div>
+<a href="#project-sofidar"><span class="index-number">01</span><span><strong>Sofidar</strong><small>AI platform</small></span><span aria-hidden="true">↗</span></a><a href="#project-crm"><span class="index-number">02</span><span><strong>Stroyka CRM</strong><small>Business systems</small></span><span aria-hidden="true">↗</span></a><a href="#project-card-studio"><span class="index-number">03</span><span><strong>Card Studio</strong><small>Marketplace automation</small></span><span aria-hidden="true">↗</span></a><a href="#project-obmer"><span class="index-number">04</span><span><strong>Obmer</strong><small>iOS / LiDAR</small></span><span aria-hidden="true">↗</span></a><p>Selected products and work in progress</p></aside></section>
 
     <section class="intro-strip">
       <div>
@@ -82,6 +65,7 @@
 <div class="case-meta">
 <span>01</span><span>AI PRODUCT PLATFORM · IN DEVELOPMENT</span>
 </div>
+<p class="project-status status-live"><span aria-hidden="true"></span>Published · evolving</p>
 <h3>Sofidar</h3>
 <p>An AI image and video platform: briefs, storyboards, scene generation, credits, job queues and media storage. I develop the product workflow, interface and integrations.</p>
 <div class="tags">
@@ -106,7 +90,8 @@
             <div class="case-meta">
 <span>02</span><span>PRODUCT / INTERNAL TOOL · 2026</span>
 </div>
-            <h3>Stroyka CRM</h3>
+            <p class="project-status status-development"><span aria-hidden="true"></span>In development</p>
+<h3>Stroyka CRM</h3>
             <p>
               Construction operations CRM with counterparties, objects, contracts and payments, backed by PostgreSQL and Prisma. Includes shared validation, server actions, REST APIs for integrations and unit/integration tests.
             </p>
@@ -120,22 +105,23 @@
 
 
         <article class="case card-studio-case" id="project-card-studio">
- <div class="case-visual image-visual visual-card-studio"><a href="case-card-studio.html"><img src="image/card-studio-v2-catalog.jpg" alt="Card Studio version 2 with a demo shop" loading="lazy"></a></div>
+ <div class="case-visual image-visual visual-card-studio"><a href="case-card-studio.html"><img src="image/card-studio-v2-catalog.jpg" alt="Card Studio version 2 with a demo shop" loading="lazy" decoding="async"></a></div>
  <div class="case-copy">
 <div class="case-meta">
 <span>03</span><span>MARKETPLACE AUTOMATION · LIVE SERVICE</span>
 </div>
+<p class="project-status status-live"><span aria-hidden="true"></span>Published · pilot ahead</p>
 <h3>Card Studio — Wildberries card preparation</h3>
 <p>A working service for preparing and improving Wildberries cards: import from Excel or straight from the seller account, characteristics from WB reference lists, fact-based AI texts, client approval by link and upload through the official WB API.</p>
  <div class="tags">
 <span>Next.js 16</span><span>TypeScript</span><span>SQLite</span><span>WB Content API</span><span>YandexGPT / Claude</span>
 </div>
  <div class="case-actions">
-<a href="case-card-studio.html">Case study →</a><a href="https://card-studio-production.up.railway.app" target="_blank" rel="noopener">Live ↗</a>
+<a href="case-card-studio.html">Case study →</a><a href="https://card-studio-production.up.railway.app" target="_blank" rel="noopener noreferrer">Live ↗</a>
 </div>
 <div class="private-note">Live since October 2026 · the first live update in a seller account will be checked with the first client</div>
 </div></article>
-        <article class="case" id="project-4">
+        <article class="case" id="project-obmer">
           <div class="case-visual visual-obmer">
             <div class="obmer-mini-phone">
 <span>+</span><small>2 840 mm</small>
@@ -148,20 +134,25 @@
             <div class="case-meta">
 <span>04</span><span>IOS / LIDAR PRODUCT · IN DEVELOPMENT</span>
 </div>
-            <h3>Obmer — LiDAR room measurement</h3>
+            <p class="project-status status-development"><span aria-hidden="true"></span>In development</p>
+<h3>Obmer — LiDAR room measurement</h3>
             <p>iOS app for interior designers using RoomPlan, ARKit and raw LiDAR mesh for room capture, manual depth measurement, quality checks and USDZ/JSON/OBJ export.</p>
             <div class="tags">
 <span>Swift</span><span>SwiftUI</span><span>ARKit</span><span>RoomPlan</span><span>LiDAR</span>
 </div>
             <div class="case-actions">
               <a href="case-obmer.html">Case study →</a>
-              <a href="https://github.com/Madina-DI/Obmer" target="_blank" rel="noopener">GitHub ↗</a>
+              <a href="https://github.com/Madina-DI/Obmer" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
             </div>
             <div class="private-note">In development · Stage 1</div>
           </div>
         </article>
 
-        <article class="case" id="project-5">
+        </div>
+
+
+      <div class="supporting-grid">
+<article class="case" id="project-5">
           <div class="case-visual visual-social">
             <div class="social-flow">
               <span>GPT</span><b>→</b><span>QUEUE</span><b>→</b><span>META</span>
@@ -174,7 +165,8 @@
             <div class="case-meta">
 <span>05</span><span>AI AUTOMATION / SOCIAL PUBLISHING</span>
 </div>
-            <h3>AI Social Publishing Manager</h3>
+            <p class="project-status status-private"><span aria-hidden="true"></span>Working system · private</p>
+<h3>AI Social Publishing Manager</h3>
             <p>GPT-connected system for content analysis, queueing, scheduling and controlled publishing through Drive, Sheets, Railway and Meta API.</p>
             <div class="tags">
 <span>Node.js</span><span>Railway</span><span>Google Drive</span><span>Sheets</span><span>Meta API</span>
@@ -196,7 +188,8 @@
             <div class="case-meta">
 <span>06</span><span>INTERACTIVE WEB · 2026</span>
 </div>
-            <h3>Dost — live 3D AI company website</h3>
+            <p class="project-status status-live"><span aria-hidden="true"></span>Published</p>
+<h3>Dost — live 3D AI company website</h3>
             <p>
               Browser-rendered 3D hero with 136 metallic cubes, interactive service objects,
               real-time reflections, GLSL raymarching energy, multilingual content and voice tracks.
@@ -206,8 +199,8 @@
 </div>
             <div class="case-actions">
               <a href="case-dost.html">Case study →</a>
-              <a href="https://madina-di.github.io/dostik-site-3d/" target="_blank" rel="noopener">Live ↗</a>
-              <a href="https://github.com/Madina-DI/dostik-site-3d" target="_blank" rel="noopener">GitHub ↗</a>
+              <a href="https://madina-di.github.io/dostik-site-3d/" target="_blank" rel="noopener noreferrer">Live ↗</a>
+              <a href="https://github.com/Madina-DI/dostik-site-3d" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
             </div>
           </div>
         </article>
@@ -227,7 +220,8 @@
             <div class="case-meta">
 <span>07</span><span>AUTOMATION · TELEGRAM</span>
 </div>
-            <h3>Oberezhno Bot</h3>
+            <p class="project-status status-private"><span aria-hidden="true"></span>Open-source project</p>
+<h3>Oberezhno Bot</h3>
             <p>
               Scheduled Telegram product with subscriber management, morning/day/evening content,
               guest-author flow, response logic, source tracking, Supabase storage and automated tests.
@@ -237,45 +231,52 @@
 </div>
             <div class="case-actions">
               <a href="case-oberezhno.html">Case study →</a>
-              <a href="https://t.me/oberezhno_women_bot" target="_blank" rel="noopener">Open bot ↗</a>
-              <a href="https://github.com/Madina-DI/oberezhno-bot" target="_blank" rel="noopener">GitHub ↗</a>
+              <a href="https://t.me/oberezhno_women_bot" target="_blank" rel="noopener noreferrer">Open bot ↗</a>
+              <a href="https://github.com/Madina-DI/oberezhno-bot" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
             </div>
           </div>
         </article>
 
         </div>
-
-
-      <div class="additional-projects">
+<div class="additional-projects">
 <div class="subsection-heading">
 <p class="eyebrow">MORE DEVELOPMENT WORK</p>
 <h3>Additional product &amp; frontend work</h3>
 </div>
 <div class="small-project-grid">
-<article class="small-project"><h4>Al-Bayan · Quran App</h4>
+<article class="small-project"><p class="project-status status-development"><span aria-hidden="true"></span>In development</p>
+<h4>Al-Bayan · Quran App</h4>
 <p>Quran learning PWA with translation, audio, quizzes and locally saved progress. A product in development.</p>
-<small>PWA · In development</small><div class="case-actions"><a href="https://github.com/Madina-DI/QuranApp" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></article><article class="small-project"><h4>DI Translator AI Bot</h4>
+<small>PWA · In development</small><div class="case-actions"><a href="https://github.com/Madina-DI/QuranApp" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></article><article class="small-project"><p class="project-status status-development"><span aria-hidden="true"></span>Prototype</p>
+<h4>DI Translator AI Bot</h4>
 <p>AI-assisted Telegram translator with polling/webhook modes and deploy-ready configuration.</p>
-<small>Node.js · Telegraf · Express</small><div class="case-actions"><a href="https://github.com/Madina-DI/Di-translatorai-bot" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></article><article class="small-project small-project-react"><h4>Kanban Board</h4>
-<p>React task board with four workflow stages, routed task details and persistent state in localStorage.</p>
-<small>React · React Router · localStorage</small><div class="case-actions"><a href="https://kanban-board-one-inky.vercel.app" target="_blank" rel="noopener noreferrer">Live ↗</a><a href="https://github.com/Madina-DI/KanbanBoard" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></article>
+<small>Node.js · Telegraf · Express</small><div class="case-actions"><a href="https://github.com/Madina-DI/Di-translatorai-bot" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></article><article class="small-project kanban-project"><p class="project-status status-learning"><span aria-hidden="true"></span>Learning project · demo</p>
+<h4>Kanban Board</h4>
+<p>A React task board with four workflow stages, task detail routes and persistent local storage.</p>
+<small>React · Router · localStorage</small><div class="case-actions">
+<a href="https://kanban-board-one-inky.vercel.app" target="_blank" rel="noopener noreferrer">Live ↗</a><a href="https://github.com/Madina-DI/KanbanBoard" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+</div></article>
 </div>
 </div>
 <details class="archive" id="archive"><summary><span><strong>Learning archive</strong><small>HTML/CSS → JavaScript → React · how my frontend practice began</small></span><span class="archive-toggle" aria-hidden="true">+</span></summary><div class="archive-grid">
-<a href="https://madina-di.github.io/Bookshop/" target="_blank" rel="noopener noreferrer" class="learning-card"><div class="learning-preview"><img src="image/previewBookshop.jpg" alt="Bookshop preview" loading="lazy"></div>
+<a href="https://madina-di.github.io/Bookshop/" target="_blank" rel="noopener noreferrer" class="learning-card"><div class="learning-preview"><img src="image/previewBookshop.jpg" alt="Bookshop preview" loading="lazy" decoding="async"></div>
 <div class="learning-copy">
 <strong>Bookshop</strong><span>JavaScript · SCSS · API</span>
-</div></a><a href="https://madina-di.github.io/youtalk/" target="_blank" rel="noopener" class="learning-card"><div class="learning-preview"><img src="image/previewBlogYouTalk.jpg" alt="YOUTalk preview" loading="lazy"></div>
+<span class="learning-status">Learning project · demo</span>
+</div></a><a href="https://madina-di.github.io/youtalk/" target="_blank" rel="noopener noreferrer" class="learning-card"><div class="learning-preview"><img src="image/previewBlogYouTalk.jpg" alt="YOUTalk preview" loading="lazy" decoding="async"></div>
 <div class="learning-copy">
 <strong>YOUTalk</strong><span>HTML · CSS · Responsive</span>
+<span class="learning-status">Learning project · demo</span>
 </div></a>
-          <a href="https://madina-di.github.io/Slider-js/" target="_blank" rel="noopener" class="learning-card"><div class="learning-preview"><img src="image/previewSlider.jpg" alt="JavaScript Slider preview" loading="lazy"></div>
+          <a href="https://madina-di.github.io/Slider-js/" target="_blank" rel="noopener noreferrer" class="learning-card"><div class="learning-preview"><img src="image/previewSlider.jpg" alt="JavaScript Slider preview" loading="lazy" decoding="async"></div>
 <div class="learning-copy">
 <strong>JavaScript Slider</strong><span>JavaScript · DOM</span>
+<span class="learning-status">Learning project · demo</span>
 </div></a>
-          <a href="https://madina-di.github.io/product-landing-page/" target="_blank" rel="noopener" class="learning-card"><div class="learning-preview"><span>HTML / CSS</span></div>
+          <a href="https://madina-di.github.io/product-landing-page/" target="_blank" rel="noopener noreferrer" class="learning-card"><div class="learning-preview"><img src="image/preview3.jpg" alt="Product Landing preview" loading="lazy" width="800" height="600" decoding="async"></div>
 <div class="learning-copy">
 <strong>Product Landing</strong><span>HTML · CSS</span>
+<span class="learning-status">Learning project · demo</span>
 </div></a>
           </div></details></section>
 
@@ -284,7 +285,7 @@
         <p class="eyebrow">CAPABILITIES</p>
         <h2>Development skills and experience.</h2>
       </div>
-      <p class="development-background">Frontend education, UX/UI training and practical experience building interfaces, applications and business tools.</p>
+      <p class="development-background">A degree in Finance &amp; Credit, frontend training and UX/UI study. My experience in accounting and construction helps me build tools around real business processes.</p>
 <div class="capability-grid">
         <div>
 <span>01</span><h3>Frontend development</h3>
@@ -310,13 +311,18 @@
 
     <section id="developer-materials" class="section developer-materials"><div class="section-heading">
 <p class="eyebrow">DEVELOPMENT &amp; AUTOMATION</p>
-<h2>Developer CV and portfolio</h2>
-<p>Developer resumes in Russian and English, selected project cases and the Card Studio demo.</p>
+<h2>Resume &amp; presentation</h2>
+<p>Developer resumes in two languages and a presentation of selected projects. Updated October 2026.</p>
 </div>
 <div class="hero-actions">
-<a class="button button-primary" href="docs/Madina_Developer_CV_RU.pdf">Developer CV · RU</a><a class="button button-ghost" href="docs/Madina_Developer_CV_EN.pdf">Developer CV · EN</a><a class="button button-ghost" href="docs/Madina_Development_Portfolio_RU.pdf">Development portfolio · PDF</a><a class="button button-ghost" href="docs/Card_Studio_WB_Demo.pdf">PDF demo ↗</a>
+<a class="button button-primary" href="docs/Madina_Developer_CV_RU.pdf" target="_blank" rel="noopener noreferrer">Developer CV · RU</a><a class="button button-ghost" href="docs/Madina_Developer_CV_EN.pdf" target="_blank" rel="noopener noreferrer">Developer CV · EN</a><a class="button button-ghost" href="docs/Madina_Development_Portfolio_RU.pdf?v=20261018" target="_blank" rel="noopener noreferrer">Presentation · RU ↗</a>
 </div></section>
-    <aside id="creative" class="creative-portfolio-link"><span>AI films and visual work</span><a href="https://madina-di.github.io/sofiere-studio/" target="_blank" rel="noopener noreferrer">Sofiere Studio · Creator portfolio ↗</a></aside><section class="section credentials">
+    <aside id="creative" class="creative-portfolio-link"><div>
+<p class="eyebrow">A VISUAL PERSPECTIVE</p>
+<h2>Code meets storytelling.</h2>
+<p>I also create AI films and visual stories for brands. That practice informs how I design interfaces and present products.</p>
+</div>
+<a href="https://madina-di.github.io/sofiere-studio/" target="_blank" rel="noopener noreferrer"><span>Sofiere Studio</span><strong>Explore AI Creator portfolio ↗</strong></a></aside><section class="section credentials">
       <div class="section-heading">
         <p class="eyebrow">TRAINING &amp; CERTIFICATES</p>
         <h2>Frontend and interface design.</h2>
@@ -338,11 +344,10 @@
       <p class="eyebrow">AVAILABLE FOR REMOTE / FREELANCE PROJECTS</p>
       <h2>Let’s discuss your application or automation.</h2>
       <div class="contact-links">
-        <a href="https://wa.me/19162250794" target="_blank" rel="noopener">WhatsApp — let’s discuss ↗</a>
+        <a href="https://wa.me/19162250794" target="_blank" rel="noopener noreferrer">WhatsApp — let’s discuss ↗</a>
         <a href="mailto:madinadakhkilgova3@gmail.com">Email ↗</a>
-        <a href="https://github.com/Madina-DI" target="_blank" rel="noopener">GitHub ↗</a>
-        <a href="https://www.instagram.com/sofiere__studio/" target="_blank" rel="noopener">Instagram ↗</a>
-        <a href="https://t.me/MADINA_MI" target="_blank" rel="noopener">Telegram ↗</a>
+        <a href="https://github.com/Madina-DI" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a href="https://t.me/MADINA_MI" target="_blank" rel="noopener noreferrer">Telegram ↗</a>
       </div>
       <p class="footer-note">Madina Dakhkilgova · Developer Portfolio · 2026</p>
     </section>

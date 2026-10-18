@@ -25,7 +25,6 @@
     "About me ↗":"Обо мне ↗",
     "CV · RU":"Резюме · RU",
     "CV · EN":"Резюме · EN",
-    "Portfolio · PDF":"Портфолио · PDF",
     "Contact":"Контакты",
     "DEVELOPMENT · PRODUCTS · AUTOMATION":"РАЗРАБОТКА · ПРИЛОЖЕНИЯ · АВТОМАТИЗАЦИЯ",
     "Frontend Developer & AI Product Builder":"Frontend-разработчик · Приложения и автоматизация",
@@ -46,9 +45,8 @@
     "SCENES / GENERATION":"СЦЕНЫ / ГЕНЕРАЦИЯ",
     "PRODUCT WORKFLOW":"ПРОЦЕСС РАБОТЫ",
     "Quran learning PWA with translation, audio, quizzes and locally saved progress. A product in development.":"PWA для изучения Корана: перевод, аудио, задания и сохранение прогресса. Продукт в разработке.",
-    "React task board with four workflow stages, routed task details and persistent state in localStorage.":"React-доска задач с четырьмя этапами, отдельными маршрутами для карточек задач и сохранением состояния в localStorage.",
     "MORE DEVELOPMENT WORK":"ДРУГИЕ ПРОЕКТЫ РАЗРАБОТКИ",
-    "Additional product & frontend work":"Дополнительные продуктовые и frontend-проекты",
+    "Other applications and websites":"Другие приложения и сайты",
     "PWA · In development":"PWA · В разработке",
     "React workflow app":"React-приложение задач",
     "Frontend catalog with API":"Frontend-каталог с API",
@@ -503,7 +501,62 @@
 
   };
 
+  Object.assign(RU, {
+  "Resume ↗": "Резюме ↗",
+  "Presentation · RU ↗": "Презентация ↗",
+  "AI Creator ↗": "AI-креатор ↗",
+  "I turn business workflows into clear, useful applications. Frontend development, product thinking and a visual eye shaped by UX/UI and AI filmmaking.": "Превращаю бизнес-процессы в понятные приложения. Frontend-разработка, продуктовый подход и внимание к визуальной подаче из практики UX/UI и AI-кино.",
+  "Independent developer / Remote": "Независимый разработчик / Удалённо",
+  "SELECTED WORK": "ИЗБРАННОЕ",
+  "AI platform": "AI-платформа",
+  "Business systems": "Бизнес-системы",
+  "Marketplace automation": "Автоматизация маркетплейсов",
+  "Selected products and work in progress": "Продукты и проекты в развитии",
+  "SELECTED LEARNING PROJECT": "УЧЕБНЫЙ ПРОЕКТ",
+  "A React task board with four workflow stages, task detail routes and persistent local storage.": "Доска задач на React: четыре этапа работы, отдельные страницы задач и сохранение в localStorage.",
+  "A degree in Finance & Credit, frontend training and UX/UI study. My experience in accounting and construction helps me build tools around real business processes.": "Образование «Финансы и кредит», обучение frontend-разработке и UX/UI. Опыт в бухгалтерии и строительстве помогает создавать инструменты для реальных бизнес-процессов.",
+  "A VISUAL PERSPECTIVE": "ВИЗУАЛЬНЫЙ ПОДХОД",
+  "Code meets storytelling.": "Разработка и визуальные истории.",
+  "I also create AI films and visual stories for brands. That practice informs how I design interfaces and present products.": "Я также создаю AI-фильмы и визуальные истории для брендов. Эта практика помогает мне проектировать интерфейсы и выразительно представлять продукты.",
+  "Explore AI Creator portfolio ↗": "Смотреть портфолио AI-креатора ↗",
+  "Resume & presentation": "Резюме и презентация",
+  "Developer resumes in two languages and a presentation of selected projects. Updated October 2026.": "Резюме разработчика на двух языках и презентация избранных проектов. Обновлено в октябре 2026.",
+  "Skip to projects": "Перейти к проектам",
+  "Published platform · active development": "Платформа опубликована · активно развивается",
+  "Published platform in active development.": "Платформа опубликована и развивается.",
+  "An AI image and video platform with projects, storyboards, generation, a trend library and learning materials. Published at sofidar.com and actively developed.": "AI-платформа для фото и видео: проекты, раскадровки, генерация, библиотека трендов и обучение. Опубликована на sofidar.com и активно развивается.",
+  "Sofidar is published at sofidar.com. The product brings generation, project workflows, trends and learning together. Credit packages and payment flows are implemented alongside the generation ledger; the platform continues to evolve through practical use.": "Sofidar опубликован на sofidar.com и объединяет генерацию, проекты, тренды и обучение. Реализованы пакеты кредитов и платёжные сценарии с учётом операций. Платформа продолжает развиваться в процессе практического использования.",
+  "Next case · Card Studio →": "Следующий кейс · Card Studio →",
+  "Next case · AI Social Publishing Manager →": "Следующий кейс · AI Social Publishing Manager →"
+});
+
+  Object.assign(RU, {
+  "Madina Dakhkilgova · Developer Portfolio · 2026": "Мадина Дахкилгова · Портфолио разработчика · 2026",
+  "AI PRODUCT PLATFORM · IN DEVELOPMENT · 2026": "AI-ПЛАТФОРМА · В РАЗВИТИИ · 2026",
+  "AI Product Builder · Full-stack prototype": "Проектирование продукта · Full-stack разработка",
+  "From isolated AI clips to a managed production pipeline.": "Единый процесс создания AI-видео.",
+  "Sofidar Studio is designed around the real workflow of AI-video production: brief, visual idea, storyboard, individual scenes, rendering, storage, credits and iteration. The goal is to make the production process controllable instead of relying on one-off generations.": "Sofidar объединяет этапы создания AI-видео: бриф, визуальную идею, раскадровку, отдельные сцены, генерацию и хранение результатов. Пользователь управляет проектом и может дорабатывать отдельные сцены.",
+  "MAIN FLOW": "ОСНОВНОЙ СЦЕНАРИЙ",
+  "Brief → storyboard → scenes → render jobs.": "Бриф → раскадровка → сцены → генерация.",
+  "Saved assets": "Сохранённые материалы",
+  "The storyboard step can be generated through Claude or mocked locally for development without using a paid LLM key. Each scene is rendered as a separate job so a failed scene can be retried without losing already completed work.": "Claude создаёт раскадровку, а каждая сцена генерируется отдельной задачей. Сцену с ошибкой можно запустить повторно, сохранив готовые результаты. Для разработки предусмотрен локальный тестовый режим.",
+  "SYSTEM DESIGN": "АРХИТЕКТУРА",
+  "Built as a product, not just a demo.": "Продуктовая архитектура.",
+  "Ledger-based balance": "Журнал кредитных операций",
+  "Credit spending and refunds are recorded through an idempotent transaction ledger.": "Списания и возвраты кредитов записываются в журнал с защитой от повторных операций.",
+  "A worker sends jobs to the provider, polls status, downloads results and stores assets locally or in S3/R2.": "Воркер отправляет задачи провайдеру, проверяет статус, скачивает результаты и сохраняет их локально или в S3/R2.",
+  "Avatars and trend library": "Аватары и библиотека трендов",
+  "Avatar reference-image sets and trend analysis support repeatable visual production.": "Наборы референсов для аватаров и разбор трендов помогают последовательно создавать визуальные проекты.",
+  "Auth, roles and safe prompts": "Вход, роли и проверка запросов",
+  "Google auth, roles, parameter validation and prompt-flag stripping reduce operational risk.": "Вход через Google, роли, валидация параметров и очистка служебных флагов в промптах защищают процесс генерации.",
+  "AI PRODUCT PLATFORM": "AI-ПЛАТФОРМА",
+  "Architecture and walkthrough available on request.": "Покажу платформу и архитектуру по запросу."
+});
+
+  Object.assign(RU, {"Published · evolving": "Опубликован · развивается", "Published · pilot ahead": "Опубликован · пилот впереди", "Working system · private": "Рабочая система · закрытый доступ", "Published": "Опубликован", "Open-source project": "Проект с открытым кодом", "Prototype": "Прототип", "Learning project · demo": "Учебный проект · демо", "Additional product & frontend work": "Другие продуктовые и frontend-проекты", "Portfolio · PDF": "Портфолио · PDF"});
+
   const titleRu = {
+    "case-sofidar.html":"Sofidar — AI-платформа · Мадина Дахкилгова",
     "case-card-studio.html":"Card Studio — автоматизация карточек WB · Мадина Дахкилгова",
     "index.html":"Мадина Дахкилгова — Портфолио разработчика",
     "case-dost.html":"Dost 3D — Кейс · Madina Dakhkilgova",
@@ -545,7 +598,8 @@
 
     const file = location.pathname.split("/").pop() || "index.html";
     document.title = lang === "ru" ? (titleRu[file] || document.title) : (document.documentElement.dataset.enTitle || document.title);
-    localStorage.setItem("portfolio-language", lang);
+    try { localStorage.setItem("portfolio-language", lang); } catch {}
+    document.querySelectorAll(".cv-link").forEach(a => { a.href = `docs/Madina_Developer_CV_${lang.toUpperCase()}.pdf`; });
     document.querySelectorAll(".lang-option").forEach(btn => {
       btn.classList.toggle("active", btn.dataset.lang === lang);
       btn.setAttribute("aria-pressed", String(btn.dataset.lang === lang));
@@ -567,5 +621,7 @@
     });
   }
 
-  apply(localStorage.getItem("portfolio-language") || "en");
+  let savedLanguage;
+  try { savedLanguage = localStorage.getItem("portfolio-language"); } catch {}
+  apply(["ru", "en"].includes(savedLanguage) ? savedLanguage : (navigator.language.startsWith("ru") ? "ru" : "en"));
 })();

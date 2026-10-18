@@ -36,3 +36,11 @@ Creative AI-video work is connected through **Sofiere Studio**.
 ## Page structure
 
 Main projects are ordered by product scope: Sofidar, Stroyka CRM, Card Studio, Obmer, AI Social Publishing Manager, Dost 3D, Oberezhno. Smaller applications follow; earlier learning projects stay in a collapsed archive. The header links to the personal profile, developer CVs in RU/EN and the development portfolio PDF. Creator work has its own Sofiere Studio portfolio.
+
+## October 18, 2026 refresh
+
+Project status is shown separately from its technology stack. Published products can still be evolving or awaiting a client pilot. The PDF presentation uses the same project order and links to the separate Sofiere Studio Creator portfolio.
+
+The header resume follows the selected EN/RU language. Both PDF resumes remain directly available in the documents section. The updated Russian presentation is `docs/Madina_Development_Portfolio_RU.pdf`.
+
+Regenerate the presentation with `python scripts/build_portfolio_pdf.py` (ReportLab and Pillow). Update project facts before rebuilding; the current source reflects the repositories, Card Studio `v2` and public pages reviewed on 18 October 2026.
